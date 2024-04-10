@@ -1,0 +1,3 @@
+$(eval $(call addlib,appmemspeed))
+
+APPMEMSPEED_SRCS-y += $(APPMEMSPEED_BASE)/memspeed.c
