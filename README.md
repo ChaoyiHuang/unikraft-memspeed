@@ -1,4 +1,4 @@
-# benchmark test for memory access code
+# benchmark for memory speed
 
 run these tests in host OS running on bare metal server with kvm virtualzation enabled.
 
