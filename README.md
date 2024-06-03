@@ -12,7 +12,7 @@ kraft build --plat qemu --arch x86_64
 
 for linux native binaries, build as follows:
 ```
- gcc memspeed.c -o memspeed
+ gcc -O2 -fno-stack-protector -fno-tree-sra -fno-split-stack -fcf-protection=none -fno-omit-frame-pointer -fno-PIC -fno-tree-loop-distribute-patterns -fno-asynchronous-unwind-tables -fno-reorder-blocks -fno-builtin-printf -fno-builtin-fprintf -fno-builtin-sprintf -fno-builtin-snprintf -fno-builtin-vprintf -fno-builtin-vfprintf -fno-builtin-vsprintf -fno-builtin-vsnprintf -fno-builtin-scanf -fno-builtin-fscanf -fno-builtin-sscanf -fno-builtin-vscanf -fno-builtin-vfscanf -fno-builtin-vsscanf -fPIE -g3 -mtune=generic -mno-red-zone -m64 -Wall -Wextra  memspeed.c -o memspeed
 ```
 
 the pretouch3 test requires huge page supported in the host OS.
